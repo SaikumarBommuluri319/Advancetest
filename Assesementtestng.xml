@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Test Suite" parallel="tests" thread-count="2">
+    <test name="Chrome Test">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="125.0"/>
+        <parameter name="os" value="Windows 10"/>
+        <classes>
+            <class name="com.TestMethods.SeleniumAdvanceTest"/>
+        </classes>
+    </test>
+    <test name="Firefox Test">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="version" value="119.0"/>
+        <parameter name="os" value="Windows 10"/>
+        <classes>
+            <class name="com.TestMethods.SeleniumAdvanceTest"/>
+        </classes>
+    </test>
+</suite>
